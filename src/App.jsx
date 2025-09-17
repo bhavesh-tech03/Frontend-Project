@@ -1,9 +1,27 @@
-function App() {
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import ErrorPage from "./components/ErrorPage";
 
-  return (
-    <div className="flex justify-center item-center">
-      <h1 className='font-bold text-red'>Bhavesh</h1>
-    </div>
-  )
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      errorElement: <ErrorPage />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: "about", element: <About /> },
+        { path: "contact", element: <Contact /> },
+      ],
+    },
+  ],
+  { basename: "/final-Project" }   // 👈 important for GitHub Pages
+);
+
+
+export default function App() {
+  return <RouterProvider router={router} />;
 }
-export default App
