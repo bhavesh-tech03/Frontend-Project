@@ -10,21 +10,21 @@ export default function Navbar() {
       <nav className="flex justify-end items-center h-3 gap-6" >
       <NavLink 
         to="/" 
-        className={({ isActive }) => (isActive ? "bg-red-200 rounded-2xl w-20 flex justify-center text-black" : "")}
+        className={({ isActive }) => (isActive ? "bg-red-200 rounded-2xl w-30 flex justify-center text-black" : "")}
       >
-        Home
+        <p className="text-2xl">Home</p>
       </NavLink>
       <NavLink 
         to="/about" 
-        className={({ isActive }) => (isActive ? "bg-red-200 rounded-2xl w-20 flex justify-center text-black" : "")}
+        className={({ isActive }) => (isActive ? "bg-red-200 rounded-2xl w-30 flex justify-center text-black" : "")}
       >
-        About
+        <p className="text-2xl">About</p>
       </NavLink>
       <NavLink 
         to="/contact" 
-        className={({ isActive }) => (isActive ? "bg-red-200 rounded-2xl w-20 flex justify-center text-black" : "")}
+        className={({ isActive }) => (isActive ? "bg-red-200 rounded-2xl w-30 flex justify-center text-black" : "")}
       >
-        Contact
+        <p className="text-2xl">Contact</p>
       </NavLink>
     </nav>
     </div>
