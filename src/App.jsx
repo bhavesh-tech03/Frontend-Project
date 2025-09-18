@@ -18,7 +18,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "/final-Project" }   // 👈 important for GitHub Pages
+  { basename: "/Frontend-Project" }   // 👈 important for GitHub Pages
 );
 
 
